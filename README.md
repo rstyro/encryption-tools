@@ -1,5 +1,15 @@
-# encryption-tools
-一个加密工具类
+# Quick start
+## Maven 引入
+```
+<!-- https://mvnrepository.com/artifact/top.lrshuai.encryption/encryption-tools -->
+<dependency>
+    <groupId>top.lrshuai.encryption</groupId>
+    <artifactId>encryption-tools</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 一个加密工具类
 + SHAUtil
     + jdkSHA1(String key)  
         jdk包实现的
