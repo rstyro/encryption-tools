@@ -1,4 +1,4 @@
-package top.lrshuai.encryption;
+﻿package top.lrshuai.encryption;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;

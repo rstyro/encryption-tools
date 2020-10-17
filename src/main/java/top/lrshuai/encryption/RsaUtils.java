@@ -1,4 +1,4 @@
-package top.lrshuai.encryption;
+﻿package top.lrshuai.encryption;
 
 import org.apache.commons.codec.binary.Base64;
 
