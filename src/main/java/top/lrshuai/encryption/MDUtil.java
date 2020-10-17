@@ -10,6 +10,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import java.security.MessageDigest;
 import java.security.Security;
 
+/**
+ * @author rstyro
+ */
 public class MDUtil {
     public static String jdkMD5(String key) throws Exception{
         MessageDigest md = MessageDigest.getInstance("MD5");

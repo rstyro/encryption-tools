@@ -10,6 +10,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import java.security.MessageDigest;
 import java.security.Security;
 
+/**
+ * @author rstyro
+ */
 public class SHAUtil {
     public static String jdkSHA1(String key) throws Exception{
         MessageDigest md = MessageDigest.getInstance("SHA");
