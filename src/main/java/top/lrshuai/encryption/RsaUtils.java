@@ -1,4 +1,4 @@
-﻿package top.lrshuai.encryption;
+package top.lrshuai.encryption;
 
 import org.apache.commons.codec.binary.Base64;
 
@@ -22,7 +22,6 @@ import java.util.Map;
  *
  * RSA 加解密的逻辑是这样的：
  * 公钥加密私钥解密，私钥解密公钥解密
- *
  * @author rstyro
  * @since 2020-10
  */

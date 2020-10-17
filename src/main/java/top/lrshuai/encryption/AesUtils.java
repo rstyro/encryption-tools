@@ -1,4 +1,4 @@
-﻿package top.lrshuai.encryption;
+package top.lrshuai.encryption;
 
 
 import org.apache.commons.codec.binary.Base64;
@@ -11,6 +11,7 @@ import java.util.UUID;
 
 /**
  * aes对称加密工具类
+ *
  * @author rstyro
  */
 public class AesUtils {

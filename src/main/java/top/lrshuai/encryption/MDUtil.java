@@ -1,4 +1,4 @@
-﻿package top.lrshuai.encryption;
+package top.lrshuai.encryption;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -12,6 +12,7 @@ import java.security.Security;
 
 /**
  * @author rstyro
+ *
  */
 public class MDUtil {
     public static String jdkMD5(String key) throws Exception{
