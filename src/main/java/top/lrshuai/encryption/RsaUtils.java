@@ -43,14 +43,14 @@ public class RsaUtils {
     /**
      * 获取公钥的key
      */
-    private static final String PUBLIC_KEY = "RSAPublicKey";
+    public static final String PUBLIC_KEY = "RSAPublicKey";
 
     /**
      * 获取私钥的key
      */
-    private static final String PRIVATE_KEY = "RSAPrivateKey";
+    public static final String PRIVATE_KEY = "RSAPrivateKey";
 
-    private static final String CHARSET_NAME = "UTF-8";
+    public static final String CHARSET_NAME = "UTF-8";
 
     /**
      * RSA最大加密明文大小
