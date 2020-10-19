@@ -19,21 +19,21 @@ public class AesUtils {
     /**
      * 算法
      */
-    private static final String AES = "AES";
+    public static final String AES = "AES";
 
     /**
      * 算法:AES/加密模式:ECB/填充方式:PKCS5Padding
      */
-    private static final String AES_PKCS5P = "AES/ECB/PKCS5Padding";
+    public static final String AES_PKCS5P = "AES/ECB/PKCS5Padding";
 
     /**
      * 编码
      */
-    private static final String CHARSET_NAME = "UTF-8";
+    public static final String CHARSET_NAME = "UTF-8";
 
-    private static final int KEY_SIZE_128 = 128;
-    private static final int KEY_SIZE_192 = 192;
-    private static final int KEY_SIZE_256 = 256;
+    public static final int KEY_SIZE_128 = 128;
+    public static final int KEY_SIZE_192 = 192;
+    public static final int KEY_SIZE_256 = 256;
 
 
     /**
