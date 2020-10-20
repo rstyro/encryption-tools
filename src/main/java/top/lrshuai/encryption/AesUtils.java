@@ -2,6 +2,7 @@ package top.lrshuai.encryption;
 
 
 import org.apache.commons.codec.binary.Base64;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -43,6 +44,12 @@ public class AesUtils {
     public static final int KEY_SIZE_128 = 128;
     public static final int KEY_SIZE_192 = 192;
     public static final int KEY_SIZE_256 = 256;
+
+    /**
+     * 这个不能在代码里面new 可参数：https://www.bbsmax.com/A/lk5aQo7451/ 解释
+     * javax.crypto.JceSecurity.getVerificationResult()
+     */
+    private static final BouncyCastleProvider BOUNCYCASTLEPROVIDER = new BouncyCastleProvider();
 
 
     /**
@@ -184,7 +191,7 @@ public class AesUtils {
     private static Cipher getCipher(int cipherMode, String pwdKey,byte[] iv,String transformMode) throws GeneralSecurityException, UnsupportedEncodingException {
         byte[] raw = pwdKey.getBytes(CHARSET_NAME);
         // 这个地方主要是兼容 PKCS7Padding
-        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        Security.addProvider(BOUNCYCASTLEPROVIDER);
         SecretKeySpec secretKeySpec = new SecretKeySpec(raw, AES);
         Cipher cipher = Cipher.getInstance(transformMode);
         if(iv != null && iv.length>0){
