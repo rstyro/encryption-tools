@@ -32,6 +32,13 @@ public class AesUtils {
     public static final String CIPHER_MODE_ECB_PKCS5PADDING = "AES/ECB/PKCS5Padding";
     public static final String CIPHER_MODE_ECB_PKCS7PADDING = "AES/ECB/PKCS7Padding";
     public static final String CIPHER_MODE_CBC_PKCS5PADDING = "AES/CBC/PKCS5Padding";
+    public static final String CIPHER_MODE_CBC_PKCS7PADDING = "AES/CBC/PKCS7Padding";
+    public static final String CIPHER_MODE_CTR_PKCS5PADDING = "AES/CTR/PKCS5Padding";
+    public static final String CIPHER_MODE_CTR_PKCS7PADDING = "AES/CTR/PKCS7Padding";
+    public static final String CIPHER_MODE_OFB_PKCS5PADDING = "AES/OFB/PKCS5Padding";
+    public static final String CIPHER_MODE_OFB_PKCS7PADDING = "AES/OFB/PKCS7Padding";
+    public static final String CIPHER_MODE_CFB_PKCS5PADDING = "AES/CFB/PKCS5Padding";
+    public static final String CIPHER_MODE_CFB_PKCS7PADDING = "AES/CFB/PKCS7Padding";
 
     /**
      * 编码
@@ -204,24 +211,31 @@ public class AesUtils {
 
 
     public static void main(String[] args) throws Exception {
-        String pwd = generateSecret(KEY_SIZE_192);
+        String pwd = generateSecret(KEY_SIZE_256);
         System.out.println("pwd="+pwd);
         System.out.println("pwd="+pwd.length());
         String text =  "abcAAA";
-        String encode = encodeBase64(text,pwd,"1234567890123456".getBytes(),CIPHER_MODE_CBC_PKCS5PADDING);
-        System.out.println("encode1="+encode);
-        String decrypt2 =decodeBase64(encode,pwd,"1234567890123456".getBytes(),CIPHER_MODE_CBC_PKCS5PADDING);
-        System.out.println("decrypt2="+decrypt2);
+        byte[] iv = "1234567890123456".getBytes();
+//        String encode = encodeBase64(text,pwd,"1234567890123456".getBytes(),CIPHER_MODE_CBC_PKCS5PADDING);
+//        System.out.println("encode1="+encode);
+//        String decrypt2 =decodeBase64(encode,pwd,"1234567890123456".getBytes(),CIPHER_MODE_CBC_PKCS5PADDING);
+//        System.out.println("decrypt2="+decrypt2);
+//
+//        String encode3 = encodeBase64(text,pwd,null,CIPHER_MODE_ECB_PKCS7PADDING);
+//        System.out.println("encode3="+encode3);
+//        String decrypt4 =decodeBase64(encode3,pwd,null,CIPHER_MODE_ECB_PKCS7PADDING);
+//        System.out.println("decrypt4="+decrypt4);
+//
+//        String encode5 = encodeBase64(text,pwd);
+//        System.out.println("encode5="+encode5);
+//        String decrypt6 =decodeBase64(encode5,pwd);
+//        System.out.println("decrypt6="+decrypt6);
 
-        String encode3 = encodeBase64(text,pwd,null,CIPHER_MODE_ECB_PKCS7PADDING);
-        System.out.println("encode3="+encode3);
-        String decrypt4 =decodeBase64(encode3,pwd,null,CIPHER_MODE_ECB_PKCS7PADDING);
-        System.out.println("decrypt4="+decrypt4);
 
-        String encode5 = encodeBase64(text,pwd);
-        System.out.println("encode5="+encode5);
-        String decrypt6 =decodeBase64(encode5,pwd);
-        System.out.println("decrypt6="+decrypt6);
+        String encode7 = encodeBase64(text,pwd,iv,CIPHER_MODE_OFB_PKCS5PADDING);
+        System.out.println("encode3="+encode7);
+        String decrypt8 =decodeBase64(encode7,pwd,iv,CIPHER_MODE_OFB_PKCS5PADDING);
+        System.out.println("decrypt4="+decrypt8);
 
     }
 }
