@@ -33,6 +33,6 @@ compile group: 'top.lrshuai.encryption', name: 'encryption-tools', version: '1.0
     + ccMD5(String key)
     + ccMD2(String key)
 + RsaUtil
-rsa加解密方法
+    + rsa加解密方法
 + AesUtil
-aes加解密方法，支持5种加密模式
+    + aes加解密方法，支持:ECB、CBC、CTR、OFB、CFB 5种加密模式
