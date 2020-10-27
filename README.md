@@ -5,8 +5,14 @@
 <dependency>
     <groupId>top.lrshuai.encryption</groupId>
     <artifactId>encryption-tools</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
 </dependency>
+```
+
+## Gradle 引入
+```
+// https://mvnrepository.com/artifact/top.lrshuai.encryption/encryption-tools
+compile group: 'top.lrshuai.encryption', name: 'encryption-tools', version: '1.0.3'
 ```
 
 ### 一个加密工具类
@@ -26,3 +32,7 @@
     + bcMD5(String key)
     + ccMD5(String key)
     + ccMD2(String key)
++ RsaUtil
+rsa加解密方法
++ AesUtil
+aes加解密方法，支持5种加密模式
